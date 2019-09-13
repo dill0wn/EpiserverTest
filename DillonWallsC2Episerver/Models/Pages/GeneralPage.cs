@@ -12,11 +12,20 @@ namespace DillonWallsC2Episerver.Models.Pages
     {
         [CultureSpecific]
         [Display(
-            Name = "Heading",
-            Description = "The page heading.",
+            Name = "Title",
+            Description = "The page Title",
             GroupName = SystemTabNames.Content,
             Order = 0)]
-        public virtual String Heading { get; set; }
+        public virtual String Title { get; set; }
+
+
+        [CultureSpecific]
+        [Display(
+            Name = "SubTitle",
+            Description = "The page SubTitle",
+            GroupName = SystemTabNames.Content,
+            Order = 0)]
+        public virtual String SubTitle { get; set; }
 
 
         [CultureSpecific]

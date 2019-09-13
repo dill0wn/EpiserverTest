@@ -30,13 +30,17 @@
 </header>
 
 <section class="page-intro centered" style="background-image: url('/Static/images/background-2.jpg')">
-    <h1 class="with-line">About Us</h1>
-    <h2>This is who we are</h2>
+    @*<h1 class="with-line">About Us</h1>
+    <h2>This is who we are</h2>*@
+
+    <h1 class="with-line">@Html.PropertyFor(m => m.Title)</h1>
+    <h2>@Html.PropertyFor(m => m.SubTitle)</h2>
 </section>
 
 <article>
     <div class="body">
-        <p>
+        @Html.PropertyFor(m => m.MainBody)
+        @*<p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed placerat orci. Praesent bibendum
             felis
             ac sem malesuada facilisis. Morbi et euismod magna, accumsan convallis purus. Proin feugiat lobortis
@@ -64,7 +68,7 @@
             leo vehicula, eget hendrerit nisl condimentum. Duis et rutrum turpis. In cursus velit sit amet tellus
             accumsan tempus. Nam fringilla metus sed ex laoreet, at finibus lectus facilisis. Proin justo orci,
             ultricies ac eleifend a, dignissim quis sapien.
-        </p>
+        </p>*@
     </div>
 </article>
 <footer>
