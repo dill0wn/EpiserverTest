@@ -1,0 +1,681 @@
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+main {
+    display: block
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+a {
+    background-color: transparent
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted
+}
+
+b, strong {
+    font-weight: bolder
+}
+
+code, kbd, samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+small {
+    font-size: 80%
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.5em
+}
+
+img {
+    border-style: none
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0
+}
+
+button, input {
+    overflow: visible
+}
+
+button, select {
+    text-transform: none
+}
+
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: button
+}
+
+[type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+[type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring, button:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+fieldset {
+    padding: .35em .75em .625em
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal
+}
+
+progress {
+    vertical-align: baseline
+}
+
+textarea {
+    overflow: auto
+}
+
+[type=checkbox], [type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+details {
+    display: block
+}
+
+summary {
+    display: list-item
+}
+
+[hidden], template {
+    display: none
+}
+
+#site-header {
+    font-family: Open Sans, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    font-size: 2.4rem;
+    width: 100%;
+    background-color: hsla(0, 0%, 100%, 0);
+    transition: background-color .3s linear
+}
+
+@media (max-width:767px) {
+    #site-header {
+        background-color: #f8f8f8;
+        border-bottom: 1px solid #e7e7e7
+    }
+}
+
+#site-header a, #site-header a:visited {
+    color: #fff;
+    transition: color .5s linear .2s
+}
+
+@media (max-width:767px) {
+    #site-header a, #site-header a:visited {
+        color: #777
+    }
+}
+
+#site-header.sticky {
+    background-color: hsla(0, 0%, 100%, .9)
+}
+
+#site-header.sticky a {
+    color: #333
+}
+
+@media (max-width:767px) {
+    #site-header.sticky {
+        background-color: #f8f8f8
+    }
+    #site-header.sticky a {
+        color: #777
+    }
+}
+
+#site-header .site-logo {
+    font-weight: 900;
+    font-size: 1.7rem;
+    padding: 2rem 2.3rem
+}
+
+#site-header #site-menu-button {
+    display: none
+}
+
+@media (max-width:767px) {
+    #site-header #site-menu-button {
+        display: block;
+        margin: 1.4rem;
+        color: #777;
+        border-radius: .6rem
+    }
+}
+
+#site-header nav {
+    font-weight: 800;
+    text-transform: uppercase;
+    display: flex;
+    align-items: flex-end;
+    padding: 2.6rem 3.8rem;
+    font-size: 1.2rem;
+    letter-spacing: .78px
+}
+
+#site-header nav a {
+    margin-left: 4rem
+}
+
+@media (max-width:767px) {
+    #site-header nav {
+        display: flex;
+        opacity: 0;
+        position: absolute;
+        top: 6.8rem;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: #f8f8f8;
+        border-bottom: 1px solid #e7e7e7;
+        align-items: flex-start;
+        padding: 1rem
+    }
+    #site-header nav.open {
+        opacity: 1;
+        -webkit-animation: fadein .5s;
+        animation: fadein .5s
+    }
+    #site-header nav.close {
+        -webkit-animation: fadeout .5s;
+        animation: fadeout .5s
+    }
+    #site-header nav a {
+        margin: 1rem 2rem
+    }
+}
+
+.page-intro {
+    font-family: Open Sans, Segoe UI, Tahoma, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    padding-bottom: 14rem;
+    padding-top: 14rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 2rem
+}
+
+.page-intro.centered {
+    text-align: center
+}
+
+.page-intro h1 {
+    font-size: 5.8rem;
+    font-weight: 800;
+    margin: 0 27.5%;
+    line-height: 6.5rem
+}
+
+.page-intro h1.with-line {
+    margin: 2rem 27.5%
+}
+
+@media (max-width:767px) {
+    .page-intro h1.with-line {
+        margin: 2rem
+    }
+}
+
+.page-intro h1.with-line:after {
+    content: "";
+    background-color: #fff;
+    display: block;
+    width: 5%;
+    height: 4px;
+    position: relative;
+    left: 47.5%;
+    right: 47.5%;
+    top: 1rem
+}
+
+@media (max-width:767px) {
+    .page-intro h1.with-line:after {
+        width: 50%;
+        left: 25%;
+        right: 25%
+    }
+}
+
+@media (max-width:767px) {
+    .page-intro h1 {
+        font-size: 3.3rem;
+        line-height: 3.5rem;
+        margin: 0 3rem
+    }
+}
+
+.page-intro h2 {
+    font-size: 1.8rem;
+    font-weight: 100;
+    margin: 0 3rem
+}
+
+@media (max-width:767px) {
+    .page-intro h2 {
+        font-size: 2.3rem;
+        line-height: 2.7rem;
+        margin: 0 3rem
+    }
+}
+
+.page-intro cite {
+    margin: 0 27.5%;
+    font-family: Lora, serif;
+    font-style: italic
+}
+
+.article-intro h1 {
+    margin-bottom: 2rem
+}
+
+.article-intro h2 {
+    font-weight: 400;
+    font-size: 3rem;
+    color: #fff;
+    letter-spacing: 1.47px;
+    line-height: 3.3rem
+}
+
+.article-intro cite {
+    margin-top: 3.5rem;
+    font-size: 2.05rem;
+    color: hsla(0, 0%, 100%, .87)
+}
+
+@media (max-width:767px) {
+    .article-intro cite {
+        font-size: 1.4rem;
+        margin: 3.5rem 3rem
+    }
+}
+
+@font-face {
+    font-family: techoblog-icons;
+    src: url("data:application/x-font-ttf;charset=utf-8;base64,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") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block
+}
+
+[class*=" i-"], [class^=i-] {
+    font-family: techoblog-icons, Arial, Helvetica, sans-serif!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.i-valid:before {
+    content: "\f00c"
+}
+
+.i-invalid:before {
+    content: "\f00d"
+}
+
+.i-bars:before {
+    content: "\f0c9"
+}
+
+.i-facebook:before {
+    content: "\ea90"
+}
+
+.i-twitter:before {
+    content: "\ea96"
+}
+
+.i-github:before {
+    content: "\eab0"
+}
+
+.btn {
+    border: 1px solid #ddd;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: #333;
+    letter-spacing: .91px;
+    outline: none
+}
+
+button:disabled {
+    opacity: .4
+}
+
+.posts article {
+    border-bottom: 1px solid #eee
+}
+
+article {
+    font-family: Open Sans, sans-serif;
+    margin: 2rem 27.5%;
+    padding-bottom: 2rem;
+    font-size: 2.25rem;
+    font-weight: 100;
+    color: #333;
+    letter-spacing: .146rem;
+    line-height: 2.55rem
+}
+
+@media (max-width:767px) {
+    article {
+        margin: 2rem
+    }
+}
+
+article h1, article h2, article h3, article h4, article h5, article h6 {
+    font-family: Open Sans, sans-serif
+}
+
+article h3 {
+    font-weight: 900;
+    font-size: 3.4rem;
+    color: #333;
+    letter-spacing: 2.21px;
+    line-height: 3.9rem;
+    margin: 1rem 0
+}
+
+@media (max-width:767px) {
+    article h3 {
+        font-size: 3rem;
+        line-height: 3rem
+    }
+}
+
+article .description {
+    margin-bottom: 1rem
+}
+
+article .body {
+    font-family: Lora, Georgia, Times New Roman, Times, serif;
+    font-size: 2rem;
+    color: #333;
+    letter-spacing: 0;
+    line-height: 3rem
+}
+
+article .body blockquote {
+    border-left: 5px solid #eee;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #888;
+    letter-spacing: -.5px;
+    padding: .4rem 2rem;
+    margin-left: 0;
+    line-height: 2.5rem
+}
+
+article cite {
+    font-family: Lora, serif;
+    font-style: italic;
+    color: #777;
+    font-size: 1.7rem;
+    margin-top: 1rem
+}
+
+article cite b {
+    font-weight: 400;
+    color: #333
+}
+
+@media (max-width:767px) {
+    article cite {
+        font-size: 1.4rem
+    }
+}
+
+article figure {
+    margin: 2rem 0;
+    text-align: center
+}
+
+article figure img {
+    max-width: 100%
+}
+
+article figcaption {
+    font-family: Lora, serif;
+    font-style: italic;
+    font-size: 1.35rem;
+    color: #888;
+    letter-spacing: .66px;
+    line-height: 1.5
+}
+
+.page-nav {
+    justify-content: flex-end;
+    margin: 2rem 25%;
+    display: flex
+}
+
+.page-nav a {
+    margin-left: 2rem
+}
+
+@media (max-width:767px) {
+    .page-nav {
+        margin: 2rem
+    }
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 1.3rem;
+    color: #777;
+    letter-spacing: .84px;
+    border-top: 1px solid #eee;
+    padding-top: 5rem
+}
+
+.circle {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 3rem;
+    background-color: #333;
+    align-items: center;
+    margin: 0 1.2rem;
+    line-height: 1
+}
+
+.circle, .social-media-links {
+    display: flex;
+    justify-content: center
+}
+
+.social-media-links {
+    flex-direction: row;
+    font-size: 1.7rem;
+    margin-bottom: 1.8rem
+}
+
+.social-media-links a {
+    color: #fff
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #eee;
+    margin-bottom: 2rem
+}
+
+form input, form textarea {
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding: 2rem 1rem;
+    outline: none
+}
+
+form ::-webkit-input-placeholder {
+    color: #999
+}
+
+form ::-moz-placeholder {
+    color: #999
+}
+
+form :-ms-input-placeholder {
+    color: #999
+}
+
+form ::-ms-input-placeholder {
+    color: #999
+}
+
+form ::placeholder {
+    color: #999
+}
+
+.error {
+    border-color: red
+}
+
+.error-message {
+    color: red;
+    font-style: italic;
+    margin-bottom: 1rem
+}
+
+@-webkit-keyframes fadein {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeout {
+    0% {
+        opacity: 1
+    }
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1
+    }
+    to {
+        opacity: 0
+    }
+}
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    font-family: Lora, serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.625;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column
+}
+
+a {
+    text-decoration: none
+}
