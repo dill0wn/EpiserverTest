@@ -1,0 +1,11 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model DillonWallsC2Episerver.Models.Pages.GeneralPage
+
+<div>
+    <h1>@Html.PropertyFor(m => m.Heading)</h1>
+    <div>
+        @Html.PropertyFor(m => m.MainBody)
+    </div>
+</div>
