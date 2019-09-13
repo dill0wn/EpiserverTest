@@ -220,6 +220,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Media\ImageFile.cs" />
     <Compile Include="Models\Pages\GeneralPage.cs" />
     <Compile Include="Models\Pages\BasePageData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -227,7 +228,6 @@
   <ItemGroup>
     <Folder Include="Business\" />
     <Folder Include="Models\Blocks\" />
-    <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
     <Folder Include="Views\Shared\" />
   </ItemGroup>

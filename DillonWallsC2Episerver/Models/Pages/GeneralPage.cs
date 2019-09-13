@@ -1,15 +1,26 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using DillonWallsC2Episerver.Models.Media;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
+using EPiServer.Web;
 
 namespace DillonWallsC2Episerver.Models.Pages
 {
     [ContentType(DisplayName = "GeneralPage", GUID = "af9ea3a9-2fa0-4acd-b9cd-d220377e99ef", Description = "")]
     public class GeneralPage : BasePageData
     {
+        [CultureSpecific]
+        [Display(
+            Name = "BannerImage",
+            Description = "The page Banner Image",
+            GroupName = SystemTabNames.Content,
+            Order = 0)]
+        [UIHint(UIHint.Image)]
+        public virtual ContentReference BannerImage { get; set; }
+
         [CultureSpecific]
         [Display(
             Name = "Title",
