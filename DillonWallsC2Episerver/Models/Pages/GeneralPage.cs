@@ -8,10 +8,8 @@ using EPiServer.SpecializedProperties;
 namespace DillonWallsC2Episerver.Models.Pages
 {
     [ContentType(DisplayName = "GeneralPage", GUID = "af9ea3a9-2fa0-4acd-b9cd-d220377e99ef", Description = "")]
-    public class GeneralPage : PageData
+    public class GeneralPage : BasePageData
     {
-
-
         [CultureSpecific]
         [Display(
             Name = "Heading",
@@ -28,6 +26,5 @@ namespace DillonWallsC2Episerver.Models.Pages
             GroupName = SystemTabNames.Content,
             Order = 1)]
         public virtual XhtmlString MainBody { get; set; }
-
     }
 }
