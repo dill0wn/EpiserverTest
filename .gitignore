@@ -99,9 +99,10 @@ ClientBin
 [Ss]tyle[Cc]op.*
 ~$*
 *.dbmdl
-Generated_Code #added for RIA/Silverlight projects
+#added for RIA/Silverlight projects
+Generated_Code
 .sass-cache/
-[Aa]pp_[Dd]ata/
+# [Aa]pp_[Dd]ata/
 PublishProfiles/
 
 # Backup & report files from converting an old project file to a newer
@@ -115,7 +116,9 @@ license.config
 
 # post build artifacts
 modulesbin/
-.vs/DillonWallsC2Episerver/v16/Server/sqlite3/db.lock
 .vs/
-*.ide-shm
-*.ide-wal
+
+# ORIGINALLY, i wasn't ignoring .vs/, so these next few were the manual ignores.
+# .vs/DillonWallsC2Episerver/v16/Server/sqlite3/db.lock
+# *.ide-shm
+# *.ide-wal
