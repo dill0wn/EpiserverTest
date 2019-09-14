@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using DillonWallsC2Episerver.Models.Blocks;
 using DillonWallsC2Episerver.Models.Media;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
@@ -9,9 +10,21 @@ using EPiServer.Web;
 
 namespace DillonWallsC2Episerver.Models.Pages
 {
+
+
+
     [ContentType(DisplayName = "GeneralPage", GUID = "af9ea3a9-2fa0-4acd-b9cd-d220377e99ef", Description = "")]
     public class GeneralPage : BasePageData
     {
+        [Display(
+            Name = "Header",
+            Description = "The page Header Block",
+            GroupName = SystemTabNames.Content,
+            Order = 0)]
+        //[UIHint(UIHint.Block)]
+        [AllowedTypes(new[] { typeof(HeaderBlock) })]
+        public virtual ContentReference Header { get; set; }
+
         [CultureSpecific]
         [Display(
             Name = "BannerImage",
@@ -28,7 +41,6 @@ namespace DillonWallsC2Episerver.Models.Pages
             GroupName = SystemTabNames.Content,
             Order = 0)]
         public virtual String Title { get; set; }
-
 
         [CultureSpecific]
         [Display(
