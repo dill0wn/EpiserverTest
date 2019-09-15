@@ -222,6 +222,7 @@
     </Compile>
     <Compile Include="Models\Blocks\HeaderBlock.cs" />
     <Compile Include="Models\Media\ImageFile.cs" />
+    <Compile Include="Models\Pages\BlogPage.cs" />
     <Compile Include="Models\Pages\GeneralPage.cs" />
     <Compile Include="Models\Pages\BasePageData.cs" />
     <Compile Include="Models\ViewModels\GeneralPageModel.cs" />
@@ -266,6 +267,7 @@
     <Content Include="Views\GeneralPage\Index.cshtml" />
     <Content Include="Static\main.map" />
     <Content Include="Views\Shared\HeaderBlock.cshtml" />
+    <Content Include="Views\BlogPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
