@@ -36,5 +36,8 @@ namespace DillonWallsC2Episerver.Models.Pages
             GroupName = SystemTabNames.Content,
             Order = 0)]
         public virtual String SubTitle { get; set; }
+
+        [Display(GroupName = SystemTabNames.Content)]
+        public virtual BlogListBlock BlogList { get; set; }
     }
 }
